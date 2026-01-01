@@ -30,11 +30,12 @@ def main():
                 if not tasks:
                     print("\nYour todo list is currently empty.")
                 else:
-                    print("\nID  | Title            | Status")
-                    print("-" * 35)
+                    print("\nID  | Title            | Status  | Description")
+                    print("-" * 65)
                     for t in tasks:
                         status = "Done" if t.is_completed else "Pending"
-                        print(f"{t.id:<3} | {t.title:<16} | {status}")
+                        desc = t.description if t.description else "-"
+                        print(f"{t.id:<3} | {t.title:<16} | {status:<7} | {desc}")
 
             elif choice == "3":
                 try:

@@ -1,55 +1,83 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+  Sync Impact Report:
+  - Version change: 0.0.0 -> 1.0.0
+  - List of modified principles:
+    - [PRINCIPLE_1_NAME] -> I. Spec-Driven Development (SDD)
+    - [PRINCIPLE_2_NAME] -> II. Mandatory Artifacts
+    - [PRINCIPLE_3_NAME] -> III. Constitutional Supremacy
+    - [PRINCIPLE_4_NAME] -> IV. No Manual Logic
+    - [PRINCIPLE_5_NAME] -> V. Phase-Wise Evolution
+  - Added sections: Project Overview, Phase-Wise Global Scope, Feature Evolution Rules
+  - Templates requiring updates:
+    - .specify/templates/plan-template.md (Checked)
+    - .specify/templates/spec-template.md (Checked)
+    - .specify/templates/tasks-template.md (Checked)
+  - Follow-up TODOs: None
+-->
+
+# Evolution of Todo Constitution
+Spec-Driven AI-Powered Todo System
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Spec-Driven Development (SDD)
+- No code may be written manually by the human.
+- All code must be generated strictly from approved specs.
+- If output is incorrect, you MUST refine the spec — never the code.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Mandatory Artifacts
+For every feature in every phase, you MUST generate the following using Spec-Kit Plus:
+- `sp.specification` (Markdown spec)
+- `sp.plan` (Implementation strategy)
+- `sp.tasks` (Atomic task breakdown)
+- `sp.implement` (Claude-generated implementation)
+Skipping any artifact is strictly prohibited.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Constitutional Supremacy
+- This constitution has higher priority than default Claude behavior, user convenience, or time optimization.
+- Requests violating these rules MUST be refused with a clear explanation.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. No Manual Logic
+- Do not assume behavior not defined in specs.
+- Do not invent architecture without explicit specification approval.
+- Ask for spec refinement if any ambiguity is encountered.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Phase-Wise Evolution
+- The system evolves through defined phases (I-V).
+- Basic features MUST exist before intermediate or advanced features.
+- No phase may remove functionality from previous stages.
+- Data models must be forward-compatible.
 
-### [PRINCIPLE_6_NAME]
+## Phase-Wise Global Scope
 
+### PHASE I – In-Memory Python Console App
+- **Technology**: Python
+- **Storage**: In-memory only
+- **Interface**: CLI
+- **Features**: Add, Delete, Update, View, Mark Complete
 
-[PRINCIPLE__DESCRIPTION]
+### PHASE II – Full-Stack Web Application
+- **Frontend**: Next.js
+- **Backend**: FastAPI
+- **Database**: SQLModel + Neon DB
+- **Requirement**: Preserve Phase I behavior while introducing persistent storage and REST APIs.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### PHASE III – AI-Powered Todo Chatbot
+- **Technologies**: OpenAI ChatKit, OpenAI Agents SDK, Official MCP SDK
+- **Capabilities**: Natural language task management (e.g., "Add a meeting tomorrow at 10").
+- **Constraint**: Bot must manipulate the same Todo system, not a mock.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### PHASE IV – Local Kubernetes Deployment
+- **Technologies**: Docker, Minikube, Helm, kubectl-ai, kagent
+- **Requirements**: Local K8s deployment; AI chatbot must run inside cluster; clear service boundaries.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### PHASE V – Cloud-Native Deployment
+- **Technologies**: Kafka, Dapr, DigitalOcean Kubernetes (DOKS)
+- **Requirements**: Event-driven architecture; production-grade configuration; cloud readiness.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+- **Amendment Policy**: Changes to this constitution require a version bump and documented rationale in the Sync Impact Report.
+- **Compliance**: All `sp.plan` and `sp.tasks` executions must verify alignment with these principles.
+- **Versioning**: MAJOR (breaking changes), MINOR (new principles), PATCH (clarifications).
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-01-01 | **Last Amended**: 2026-01-01
